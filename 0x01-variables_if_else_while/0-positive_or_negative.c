@@ -5,7 +5,7 @@
 /**
  * *main -> assign a random number to the variable n each time it is executed
  * *based a condition
- * *Return : always 0
+ * *Return : Always 0 (SUCCESS)
  * **/
 int main(void)
 {
@@ -23,5 +23,4 @@ int main(void)
 	}
 	return (0);
 }
-
 
