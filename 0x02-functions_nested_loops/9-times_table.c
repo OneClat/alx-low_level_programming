@@ -1,34 +1,33 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- *  * main - prints all possible different combinations of three digits
- *   * Return: Always 0 (Success)
- *    **/
-int main(void)
+ * *times_table -> time table
+ * */
+void times_table(void)
 {
-	int n, m, l;
+		int x, y, k;
 
-	for (n = 48; n < 58; n++)
-	{
-		for (m = 49; m < 58; m++)
-		{
-			for (l = 50; l < 58; l++)
-			{
-				if (l > m && m > n)
-				{
-					putchar(n);
-					putchar(m);
-					putchar(l);
-					if (n != 55 || m != 56)
+			for (x = 0; x < 10; x++)
 					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+								for (y = 0; y < 10; y++)
+											{
+															k = x * y;
+																		if (y == 0)
+																							_putchar(k + '0');
+																					if (y != 0 && k < 10)
+																									{
+																														_putchar(',');
+																																		_putchar(' ');
+																																						_putchar(' ');
+																																										_putchar(k + '0');
+																																													} else if (k >= 10)
+																																																	{
+																																																						_putchar(',');
+																																																										_putchar(' ');
+																																																														_putchar((k / 10) + '0');
+																																																																		_putchar((k % 10) + '0');
+																																																																					}
+																																															}
+										_putchar('\n');
+											}
 }
-
