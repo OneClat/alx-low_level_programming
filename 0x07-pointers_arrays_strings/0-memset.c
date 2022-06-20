@@ -1,19 +1,19 @@
-#include <stdio.h>
-
-int _strlen(char *);
+#include "main.h"
+#include <string.h>
 
 /**
- * * main - check the code for Holberton School students.
- * *
- * * Return: Always 0.
+ * * _memset -> this memory set function
+ * * @s: string
+ * * @b: a charcter
+ * * @n: an integer
+ * * Return:  a string
  * **/
-int main(void)
+char *_memset(char *s, char b, unsigned int n)
 {
-	char *str;
-	int len;
+	unsigned int a;
 
-	str = "Holberton!";
-	len = _strlen(str);
-	printf("%d\n", len);
-	return (0);
+	for (a = 0; a < n; a++)
+		s[a] = b;
+
+	return (s);
 }
